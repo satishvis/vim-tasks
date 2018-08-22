@@ -16,8 +16,9 @@ nnoremap <buffer> <leader>N :call NewTask(-1)<cr>
 nnoremap <buffer> <leader>d :call TaskComplete()<cr>
 nnoremap <buffer> <leader>x :call TaskCancel()<cr>
 nnoremap <buffer> <leader>a :call TasksArchive()<cr>
-nnoremap <buffer> <localleader>d :call TaskComplete()<cr>:call TasksArchive()<cr>
-nnoremap <buffer> <localleader>x :call TaskCancel()<cr>:call TasksArchive()<cr>
+" Additional
+nnoremap <buffer> <localleader>d :call TaskComplete()<cr>:call TasksArchive()<cr>:w<cr>
+nnoremap <buffer> <localleader>x :call TaskCancel()<cr>:call TasksArchive()<cr>:w<cr>
 
 " GLOBALS
 
