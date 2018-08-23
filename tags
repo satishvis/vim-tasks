@@ -1,0 +1,34 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+<leader>N	ftplugin/tasks.vim	/^nnoremap <buffer> <leader>N :call NewTask(-1)<cr>$/;"	m
+<leader>a	ftplugin/tasks.vim	/^nnoremap <buffer> <leader>a :call TasksArchive()<cr>$/;"	m
+<leader>d	ftplugin/tasks.vim	/^nnoremap <buffer> <leader>d :call TaskComplete()<cr>:call TasksArchive()<cr>:w<cr>$/;"	m
+<leader>n	ftplugin/tasks.vim	/^nnoremap <buffer> <leader>n :call NewTask(1)<cr>$/;"	m
+<leader>x	ftplugin/tasks.vim	/^nnoremap <buffer> <leader>x :call TaskCancel()<cr>:call TasksArchive()<cr>:w<cr>$/;"	m
+<localleader>d	ftplugin/tasks.vim	/^nnoremap <buffer> <localleader>d :call TaskComplete()<cr>$/;"	m
+<localleader>x	ftplugin/tasks.vim	/^nnoremap <buffer> <localleader>x :call TaskCancel()<cr>$/;"	m
+AddAttribute	ftplugin/tasks.vim	/^function! AddAttribute(name, value)$/;"	f
+CreateMatch	syntax/tasks.vim	/^function! s:CreateMatch(name, regex)$/;"	f
+GetProjects	ftplugin/tasks.vim	/^function! GetProjects()$/;"	f
+NewTask	ftplugin/tasks.vim	/^function! NewTask(direction)$/;"	f
+RemoveAttribute	ftplugin/tasks.vim	/^function! RemoveAttribute(name)$/;"	f
+SetLineMarker	ftplugin/tasks.vim	/^function! SetLineMarker(marker)$/;"	f
+TaskCancel	ftplugin/tasks.vim	/^function! TaskCancel()$/;"	f
+TaskComplete	ftplugin/tasks.vim	/^function! TaskComplete()$/;"	f
+TasksArchive	ftplugin/tasks.vim	/^function! TasksArchive()$/;"	f
+Trim	ftplugin/tasks.vim	/^function! Trim(input_string)$/;"	f
+b:loaded_tasks	ftplugin/tasks.vim	/^let b:loaded_tasks = 1$/;"	v
+b:regesc	ftplugin/tasks.vim	/^let b:regesc = '[]()?.*@='$/;"	v
+b:regesc	syntax/tasks.vim	/^let b:regesc = '[]()?.*@='$/;"	v
+initVariable	ftplugin/tasks.vim	/^function! s:initVariable(var, value)$/;"	f
+main_syntax	syntax/tasks.vim	/^  let main_syntax = 'tasks'$/;"	v
+s:dateFormat	ftplugin/tasks.vim	/^let s:dateFormat = g:TasksDateFormat$/;"	v
+s:regAttribute	ftplugin/tasks.vim	/^let s:regAttribute = g:TasksAttributeMarker . '\\w\\+\\(([^)]*)\\)\\='$/;"	v
+s:regCancelled	ftplugin/tasks.vim	/^let s:regCancelled = g:TasksAttributeMarker . 'cancelled'$/;"	v
+s:regDone	ftplugin/tasks.vim	/^let s:regDone = g:TasksAttributeMarker . 'done'$/;"	v
+s:regMarker	ftplugin/tasks.vim	/^let s:regMarker = join([escape(g:TasksMarkerBase, b:regesc), escape(g:TasksMarkerDone, b:regesc), escape(g:TasksMarkerCancelled, b:regesc)], '\\|')$/;"	v
+s:regProject	ftplugin/tasks.vim	/^let s:regProject = '^\\s*.*:$'$/;"	v
