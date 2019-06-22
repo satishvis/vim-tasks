@@ -37,7 +37,7 @@ call s:initVariable('g:TasksMarkerDone', '✔')
 call s:initVariable('g:TasksMarkerCancelled', '✘')
 call s:initVariable('g:TasksDateFormat', '%Y-%m-%d %H:%M')
 call s:initVariable('g:TasksAttributeMarker', '@')
-call s:initVariable('g:TasksArchiveSeparator', '＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿')
+call s:initVariable('g:TasksArchiveSeparator', '-------------------')
 
 let b:regesc = '[]()?.*@='
 
@@ -192,7 +192,7 @@ function! TasksArchive()
     let l:doneMatch = match(l:line, s:regDone)
     let l:cancelledMatch = match(l:line, s:regCancelled)
     let l:projectMatch = matchstr(l:line, s:regProject)
-    
+
     if l:doneMatch > -1 || l:cancelledMatch > -1
       call add(l:completedTasks, [l:lineNr, Trim(l:line)])
     endif
@@ -207,7 +207,7 @@ function! TasksArchive()
 
   if l:archiveLine == -1
     " no archive found yet, so let's stick one in at the very bottom
-    exec '%s#\($\n\s*\)\+\%$##'
+    " exec '%s#\($\n\s*\)\+\%$##'
     exec 'normal Go'
     exec 'normal o' . g:TasksArchiveSeparator
     exec 'normal oArchive:'
